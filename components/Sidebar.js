@@ -1,6 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import logo from '../assets/amazon_logo.png'
+import logoFull from '../assets/amazon_logo_full.png'
+import { FaBox } from 'react-icons/fa'
+import { BsFillBookmarkFill } from 'react-icons/bs'
+import { BsFillPersonFill } from 'react-icons/bs'
 import { ConnectButton } from 'web3uikit'
+import { AiOutlineHistory } from 'react-icons/ai'
 
 const isAuthenticated = true
 const username = ''
@@ -29,10 +36,7 @@ const Sidebar = () => {
           isAuthenticated && (
             <>
             <div className={styles.profilePicContainer}>
-              <Image
-              src={`https://avatars.dicebear.com/api/pixel-art/${username}.svg`}
-              alt='profile'
-              className={styles.profilePic}
+              <Image src={`https://avatars.dicebear.com/api/pixel-art/${username}.svg`} alt='profile' className={styles.profilePic}
               height={100}
               width={100}
               />
@@ -63,11 +67,39 @@ const Sidebar = () => {
           )}
           <div className={styles.ConnectButton}>
             <ConnectButton />
-
           </div>
-
       </div>
-
+      <div className={styles.menu}>
+            <Link href='/'>
+              <div className={styles.menuItem}>
+                <Image src={logo} height={30} width={30} className={styles.amazonLogo}
+                />
+                My Amazon
+                <br /> Board
+              </div>
+            </Link>
+            <div className={styles.menuItem}>
+                <FaBox />
+                Collections
+            </div>
+            <div className={styles.menuItem}>
+              <BsFillBookmarkFill />
+              Saved
+            </div>
+            <div className={styles.menuItem}>
+              <BsFillPersonFill />
+              Profile
+            </div>
+            <Link href='/history'>
+              <div className={styles.menuItem}>
+                <AiOutlineHistory />
+                Transaction History
+              </div>
+            </Link>
+          </div>
+          <div className={styles.companyName}>
+            <Image src={logoFull} alt='amazon' height={100} width={100} />
+          </div>
     </div>
   )
 }
