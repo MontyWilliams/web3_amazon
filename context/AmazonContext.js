@@ -5,13 +5,13 @@ export const AmazonContext = createContext()
 
 export const AmazonProvider = ({children}) => {
   return (
-    <AmazonContext.AmazonProvider
+    <AmazonContext.Provider
     value = {{
 
     }}
     >
       {children}
-    </AmazonContext.AmazonProvider>
+    </AmazonContext.Provider>
     
   )
 }
