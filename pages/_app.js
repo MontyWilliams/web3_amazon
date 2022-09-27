@@ -11,7 +11,6 @@ function MyApp({ Component, pageProps }) {
       <AmazonProvider>
         <Component {...pageProps} />
       </AmazonProvider>
-
     </MoralisProvider>
   )
 }

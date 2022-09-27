@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import logo from '../assets/amazon_logo.png'
@@ -8,9 +8,18 @@ import { BsFillBookmarkFill } from 'react-icons/bs'
 import { BsFillPersonFill } from 'react-icons/bs'
 import { ConnectButton } from 'web3uikit'
 import { AiOutlineHistory } from 'react-icons/ai'
+import { AmazonContext } from '../context/AmazonContext'
 
-const isAuthenticated = true
-const username = ''
+const isAuthenticated = false
+
+// const {
+//   authenticate,
+//     isAuthenticated,
+//     enableWeb3,
+//     Moralis,
+//     user,
+//     isWeb3Enabled,
+// } = useContext(AmazonContext)
 
 const Sidebar = () => {
   const styles = {
@@ -48,12 +57,12 @@ const Sidebar = () => {
                 type='text'
                 placeholder='Username...'
                 className={styles.usernameInput}
-                // value ={nickname}
-                // onchange={e => setNickname(e.target.value)}
+                value ={nickname}
+                onchange={e => setNickname(e.target.value)}
                 />
                 </div>
                 <button className={styles.setNickname}
-                // onClick={handleSetUsername}
+                onClick={handleSetUsername}
                 >
                 set Nickname
                 </button>

@@ -22,9 +22,17 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-# React Shortcuts
+# What I learned 
+
+### React Shortcuts
 For react boiler plate reacte arrow function export snippet use:
 """
 rafce
 """
 It will automatically create a component using the name of the file
+
+### Image genetator for Profile
+ this api returns a image based on a string. we use it to generate user profile image
+
+### Optional Chaining
+whe using await you may add a question mark if your not sure if anything will be returned. This will prevent the error that occurs when the value is null
