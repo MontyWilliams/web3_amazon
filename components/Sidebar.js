@@ -58,11 +58,13 @@ const Sidebar = () => {
               <div>
               <div className={styles.welcome}>Welcome{username}</div>
               </div>
-            )
-          }
+            )}
           </>
-          )
-        }
+          )}
+          <div className={styles.ConnectButton}>
+            <ConnectButton />
+
+          </div>
 
       </div>
 
