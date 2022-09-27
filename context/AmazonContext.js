@@ -1,0 +1,17 @@
+import { createContext, useState, useEffect } from 'react'
+import { useMoralis } from 'react-moralis'
+
+export const AmazonContext = createContext()
+
+export const AmazonProvider = ({children}) => {
+  return (
+    <AmazonContext.AmazonProvider
+    value = {{
+
+    }}
+    >
+      {children}
+    </AmazonContext.AmazonProvider>
+    
+  )
+}
